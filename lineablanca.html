@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/lineablanca.css">
+</head>
+<body>
+    <header>
+        <div class="encabezado">
+            <img  alt="Logo" class="logo" src="../images/logo.jpg">
+            <h1 class="titulo-centrado"><a href="index.html">ElectroStore</a></h1>
+            <div class="carrito">
+                <button onclick="verCarrito()" class="btn-carrito">
+                    <img src="../images/carrito.png" alt="Carrito">
+                    <span id="contador-items">0</span> items - S/. <span id="total-precio">0.00</span>
+                </button>
+            </div>
+        </div>
+        <form class="buscador">
+            <input type="text" placeholder="Buscar..." class="campo-busqueda">
+            <button type="submit" class="btn-buscar">Buscar</button>
+        </form>
+        <ul class="barra-categorias">
+            <li><a href="electrodomesticos.html">Electrodomésticos</a></li>
+            <li><a href="lineablanca.html">Línea Blanca</a></li>
+            <li><a href="menaje.html">Menaje</a></li>
+        </ul>
+    </header>
+
+
+    <main class="productos">
+        <h1 class="titulo">Línea Blanca</h1>
+        <div class="galeria">
+            <div class="producto">
+                <img src="../lineablanca/refrilg.jpeg" alt="refrigeradora">
+                <h2>Refrigeradora LG Side by Side 616L - LS66SPG | LG</h2>
+                <p>Nuestro innovador sistema de fabricación de hielo está integrado a la puerta de la refrigeradora, lo que brinda un amplio espacio en los estantes interiores y permite disponer de más espacio de almacenamiento en la puerta.</p>
+                <p>Precio: S/. 3499.00</p>
+                <p><strong>Stock:</strong> 34 unidades disponibles</p>
+                <button class="btn-agregar" data-precio="3499.00" data-nombre="Refrigeradora LG Side by Side 616L - LS66SPG | LG">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="../lineablanca/refrielectro.jpeg" alt="refrigerador">
+                <h2>Refrigeradora Electrolux Top Mount No Frost 341L Dispensador de agua (ERTS45K2HUS)</h2>
+                <p>Conoce el nuevo refrigerador Electrolux Otawa Ice 341 Litros No Frost. Pensado para entregarte la mayor flexibilidad y espacio en tu cocina que gracias a su óptima distribución interior podrás organizar tus alimentos y bebidas como quieras.</p>
+                <p>Precio: S/. 1649.00</p>
+                <p><strong>Stock:</strong> 25 unidades disponibles</p>
+                <button class="btn-agregar" data-precio="1649.00" data-nombre="Refrigeradora Electrolux Top Mount No Frost 341L Dispensador de agua (ERTS45K2HUS)">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="../lineablanca/lavadoralg.jpeg" alt="Lavadora">
+                <h2>Lavadora Carga Frontal 25Kg WM25WV2S6W | LG</h2>
+                <p>seleccione un programa de lavado y la tecnología 6Motion Direct Drive moverá la tina de la lavadora en múltiples direcciones, brindando a las telas el cuidado adecuado mientras la ropa queda completamente limpia.</p>
+                <p>Precio: S/. 3059.00</p>
+                <p><strong>Stock:</strong> 30 unidades disponibles</p>
+                <button class="btn-agregar" data-precio="3059.00" data-nombre="Lavadora Carga Frontal 25Kg WM25WV2S6W | LG">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="../lineablanca/lavadoras.jpeg" alt="Lavadora">
+                <h2>Lavadora Carga Superior 20 kg Self Clean Gris | Samsung</h2>
+                <p>Lavadora con Gran Capacidad para el lavado de prendas más pesadas con menor esfuerzo
+                    Tecnología BubbleStorm para mejor limpieza de tu ropa con ahorro de energía y agua
+                    Digital Inverter para mayor ahorro de energía y menor ruido durante el ciclo de lavado</p>
+                <p>Precio: S/. 1649.00</p>
+                <p><strong>Stock:</strong> 50 unidades disponibles</p>
+                <button class="btn-agregar" data-precio="1649.00" data-nombre="Lavadora Carga Superior 20 kg Self Clean Gris | Samsung">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="../lineablanca/cocinasa.jpeg" alt="Cocina">
+                <h2>Cocina Samsung a gas 6 hornillas NX52T3310PV</h2>
+                <p> Prepara los platos más deliciosos rápidamente con esta Cocina Samsung NX52T3310PV gas 6Â quemadores, fabricado con tapa de vidrio templado, parrillas de hierro fundido y un sistema de seguridad tanto en hornillas como en el horno.</p>
+                <p>Precio: S/. 1699.00</p>
+                <p><strong>Stock:</strong> 8 unidades disponibles</p>
+                <button class="btn-agregar" data-precio="1699.00" data-nombre="Cocina Samsung a gas 6 hornillas NX52T3310PV">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="../lineablanca/cocinamabe.jpeg" alt="cocina">
+                <h2>Cocina 4 hornillas CMP6035FX0 acero MABE</h2>
+                <p>Cocina mejor con tecnología Ultimate desde que empiezas a preparar, hasta que terminas de limpiar. Para mabe cocinar empieza desde que elegimos los ingredientes y finaliza hasta que dejamos limpio el último recipiente que usamos.</p>
+                <p>Precio: S/. 899.00</p>
+                <p><strong>Stock:</strong> 15 unidades disponibles</p>
+                <button class="btn-agregar" data-precio="899.00" data-nombre="Cocina 4 hornillas CMP6035FX0 acero MABE">Agregar al Carrito</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+           
+            <div class="footer-section contactos">
+                <h3>Contactos</h3>
+                <p>Teléfono: (+51) 981 515 659 </p>
+                <p>Email: atencionweb@electroshop.com.pe</p>
+            </div>
+            
+            
+            <div class="footer-section informacion-cliente">
+                <h3>Información para el Cliente</h3>
+                <p><a href="#">Política de Privacidad</a></p>
+                <p><a href="#">Términos y Condiciones</a></p>
+                <p><a href="#">Preguntas Frecuentes (FAQ)</a></p>
+            </div>
+            
+            
+            <div class="footer-section redes-sociales">
+                <h3>Síguenos</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        
+       
+        <div class="footer-bottom">
+            <p>&copy; 2024 ElectroStore. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

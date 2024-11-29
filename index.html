@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    
+    <div class="encabezado">
+        <img  alt="Logo" class="logo" src="../images/logo.jpg">
+        <h1 class="titulo-centrado"><a href="index.html">ElectroStore</a></h1>
+        <div class="carrito">
+            <button onclick="verCarrito()" class="btn-carrito">
+                <img src="../images/carrito.png" alt="Carrito">
+                <span id="contador-items">0</span> items - S/. <span id="total-precio">0.00</span>
+            </button>
+        </div>
+    </div>
+    <form class="buscador">
+        <input type="text" placeholder="Buscar..." class="campo-busqueda">
+        <button type="submit" class="btn-buscar">Buscar</button>
+    </form>
+    <ul class="barra-categorias">
+        <li><a href="electrodomesticos.html">Electrodomésticos</a></li>
+        <li><a href="lineablanca.html">Línea Blanca</a></li>
+        <li><a href="menaje.html">Menaje</a></li>
+    </ul>
+
+    <div>
+        <img class="banner" src="../images/banner.png">
+    </div>
+    <h2 class="subtitulo">Linea blanca</h2>
+    <h3 class="subtitulo2">Aprovecha nuestras Promociones</h3>
+    <div class="galeria">
+        <div class="imagen">
+            <img src="../images/refri.png" alt="Imagen 1">
+            <p></p>
+            <button class="btn-vermas" onclick="abrirModal('modal1')">Ver más</button>
+            <button class="btn-agregar" data-precio="2299.00" data-nombre="Lavadora Samsung - 22 KG" >Agregar al Carrito</button>
+        </div>
+        <div class="imagen">
+            <img src="../images/lavadora.png" alt="Imagen 2">
+            <p></p>
+            <button class="btn-vermas" onclick="abrirModal('modal2')">Ver más</button>
+            <button class="btn-agregar" data-precio="3562.25" data-nombre="Lavadora Samsung - 22 KG">Agregar al carrito</button>
+        </div>
+        <div class="imagen">
+            <img src="../images/cocina.png" alt="Imagen 3">
+            <p></p>
+            <button class="btn-vermas" onclick="abrirModal('modal3')">Ver más</button>
+            <button class="btn-agregar" data-precio="2049.00" data-nombre="Samsung Cocina a Gas 6 Hornillas">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal">
+        
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('modal1')">&times;</span>
+            <h1>Refrigeradora SAMSUNG RT35K5930S8</h1>
+            <h2 class="ver-mas">Características:</h2>
+            <h3 class="ver-mas">Twin Cooling Plus™</h3>
+            <p class="ver-mas">Crea un entorno favorable para preservar los alimentos frescos en el conservador hasta con un 70% de humedad</p>
+            <h3 class="ver-mas">Alimentos congelados,sabrosos y sin olor</h3>
+            <p class="ver-mas">Los compartimientos se enfrian de manera independiente para evitar que los olores indeseados pasen del conservador al congelador</p>  
+            <h3 class="ver-mas">Power Cool</h3>
+            <p class="ver-mas">Enfría rápidamente alimentos y bebidas</p>
+            <h3 class="ver-mas">Compesor Digital Inverter</h3>
+            <p class="ver-mas">20 años de garantia en el compresor, ahorra hasta un 50% de energía y minimiza el ruido</p>
+            <h2 class="ver-mas">Precio : S/.2,299.00 </h2>
+            <button class="btn-comprar" onclick="comprar()">Comprar</button>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('modal2')">&times;</span>
+            <h1>Lavadora Samsung - 22 KG</h1>
+            <h2 class="ver-mas">Características:</h2>
+            <h3 class="ver-mas">Tecnología BubbleStorm™</h3>
+            <p class="ver-mas">Incluye 3 funciones especializadas, dan como resultado un lavado eficiente con máximo rendimiento y ahorro energético.</p>
+            <h3 class="ver-mas">Active Bubble</h3>
+            <p class="ver-mas">Ayuda a que el jabón penetre más rápido en la ropa (hasta 2.5 veces)</p>  
+            <h3 class="ver-mas">Speed Spray</h3>
+            <p class="ver-mas">Reduce el tiempo de enjuague, además está equipada con el dosificador Magic Dispenser o Pulsador Center Jet, que crea un potente remolino de agua que disuelve el jabón y lo dispersa de una manera uniforme antes de que comience el ciclo de lavado</p>
+            <h3 class="ver-mas">Super Speed</h3>
+            <p class="ver-mas">Completa un lavado 43% más rápido.
+                10 ciclos de lavado.
+                Cuenta con Garantia Samsung de 20 años en el motor.</p>
+            <h2 class="ver-mas">Precio : S/.3,562.25 </h2>
+            <button class="btn-comprar" onclick="comprar()">Comprar</button>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('modal3')">&times;</span>
+            <h1>Samsung Cocina a Gas 6 Hornillas NX52T3310PV/PE</h1>
+            <h2 class="ver-mas">Características:</h2>
+            <h3 class="ver-mas">Cocción más rápida y energéticamente eficiente</h3>
+            <p class="ver-mas">Cocine de manera rápida y eficiente con un quemador Rápido, que permite una cocción más rápida y un control de temperatura fácilmente ajustable. Con solo girar las perillas, puede pasar rápidamente de una temperatura baja a una temperatura alta, y cocinar alimentos con sorprendente velocidad y eficiencia energética.</p>
+            <h3 class="ver-mas">Cocine de manera más conveniente y segura</h3>
+            <p class="ver-mas">Disfruta de la flexibilidad de cocinar con ollas y sartenes de distintos tamaños y al mismo tiempo. El diseño de las parrillas proporcionan un área de cocción mas amplia, por lo que tiene un espacio más amplio para un mayor uso y utilizar una mayor variedad de utensilios de cocina. Sus gruesas parrillas de hierro fundido brindan una mayor estabilidad, con menos riesgo de que las ollas y sartenes se vuelquen.</p>  
+            <h3 class="ver-mas">Cocine mucho más en un horno más amplio</h3>
+            <p class="ver-mas">Disfruta de un mayor espacio para hornear gracias a su enorme capacidad de 146 litros. Puede preparar múltiples platos en diferentes niveles, como verduras, pasteles o guisos. También puede preparar platillos grandes, como un gran pavo para cualquier ocasión.</p>
+            <h3 class="ver-mas">Diseño elegante y robusto</h3>
+            <p class="ver-mas">Dele a su hogar un estilo impecable y duradero con un diseño moderno que se adapta armoniosamente a su cocina. Las parrillas de hierro fundido tienen una atractiva forma hexagonal. El acabado tipo espejo de la puerta y la manija plana crean un aspecto sofisticado y minimalista.</p>
+            <h2 class="ver-mas">Precio : S/.2,049.00 </h2>
+            <button class="btn-comprar" onclick="comprar()">Comprar</button>
+        </div>
+    </div>
+
+    <div>
+        <img class="banner" src="../images/banner2.png">
+    </div>
+
+    <h2 class="subtitulo">Electrodomésticos</h2>
+    <h3 class="subtitulo2">Aprovecha nuestras Promociones</h3>
+    <div class="galeria">
+        <div class="imagen">
+            <img src="../images/licuadora.png" alt="Imagen 1">
+            <p></p>
+            <button class="btn-vermas" onclick="abrirModal('modal4')">Ver más</button>
+            <button class="btn-agregar" data-precio="249.00" data-nombre="Licuadora Oster® 2 velocidades más pulso y vaso de vidrio">Agregar al carrito</button>
+        </div>
+        <div class="imagen">
+            <img src="../images/microondas.png" alt="Imagen 2">
+            <p></p>
+            <button class="btn-vermas" onclick="abrirModal('modal5')">Ver más</button>
+            <button class="btn-agregar" data-precio="239.00" data-nombre="Horno microondas Miray HMM-21N">Agregar al carrito</button>
+        </div>
+        <div class="imagen">
+            <img src="../images/arrocera.png" alt="Imagen 3">
+            <p></p>
+            <button class="btn-vermas" onclick="abrirModal('modal6')">Ver más</button>
+            <button class="btn-agregar" data-precio="79.00" data-nombre="Olla Arrocera Electrolux Efficient Premium (RCB50)">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="modal4" class="modal">
+        
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('modal4')">&times;</span>
+            <h1>Licuadora Oster® 2 velocidades más pulso y vaso de vidrio</h1>
+            <h2 class="ver-mas">Características:</h2>
+            <h3 class="ver-mas">Licuadora Oster® 2 velocidades</h3>
+            <p class="ver-mas">La licuadora Oster® con su potente motor 4 veces más duradero*** con 800 W de potencia* te ayuda a preparar deliciosas y saludables recetas.</p>
+            <h3 class="ver-mas">Vaso de vidrio Boroclass® de 1,5 L (6 tazas) de capacidad</h3>
+            <p class="ver-mas">resistente a ingredientes hirviendo** que es perfecto para preparar sopas y otros platos calientes o fríos.
+            </p>  
+            <h3 class="ver-mas">Diseño moderno y práctico</h3>
+            <p class="ver-mas">Potente motor con 800 W de potencia*
+                Motor 4 veces más duradero**
+                Sistema de acople de metálico 10 veces más fuerte**** entre la cuchilla y el eje de la base que prolonga la vida de la licuadora.
+                Revolucionaria cuchilla trituradora de hielo
+                2 velocidades y función de pulso alto y bajo, que te da más control y flexibilidad para obtener la consistencia deseada.</p>
+            
+            <h2 class="ver-mas">Precio : S/.249.00 </h2>
+            <button class="btn-comprar" onclick="comprar()">Comprar</button>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('modal5')">&times;</span>
+            <h1>Horno microondas Miray HMM-21N</h1>
+            <h2 class="ver-mas">Características:</h2>
+            <h3 class="ver-mas">Horno microondas Miray</h3>
+            <p class="ver-mas">Con este Horno Microondas Miray puedes calentar, cocinar, descongelar y mucho más, tiene diseño moderno y muy funcional, este horno microondas le permite calentar los alimentos de una manera rápida y segura .</p>
+            <h3 class="ver-mas">cuenta con programas prefijados para cocinar los alimentos más fácilmente</h3>
+            <p class="ver-mas">Se activa automáticamente después de la preparación, tus recetas se mantienen a la temperatura ideal hasta que se sirven, dándole aún más tiempo libre en tu rutina.
+            </p>  
+            <h3 class="ver-mas">Diseño moderno y práctico</h3>
+            <p class="ver-mas">tiene un panel digital amigable porqué es muy sencillo de programar. Como todos los productos Miray, este Horno Microondas cuenta con la garantía de ElectroStore.</p>
+            <h2 class="ver-mas">Precio : S/.239.00 </h2>
+            <button class="btn-comprar" onclick="comprar()">Comprar</button>
+        </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('modal6')">&times;</span>
+            
+            <h1>Olla Arrocera Electrolux Efficient Premium (RCB50)</h1>
+            <h2 class="ver-mas">Características:</h2>
+            <h3 class="ver-mas">Olla Arrocera Electrolux Efficient</h3>
+            <p class="ver-mas">Es un accesorio multifuncional que te ayudara a cocinar diferentes recetas, como arroz y verduras, de forma fácil y segura.</p>
+            <h3 class="ver-mas">Mantener Caliente</h3>
+            <p class="ver-mas">Se activa automáticamente después de la preparación, tus recetas se mantienen a la temperatura ideal hasta que se sirven, dándole aún más tiempo libre en tu rutina.
+            </p>  
+            <h3 class="ver-mas">Diseño moderno y práctico</h3>
+            <p class="ver-mas">Su tazón interior es antiadherente de 1.3L de capacidad, prepara porciones para todos en casa. Es fácil de limpiar, ya que es extraíble. Su tapa de vidrio refractario resistente a las altas temperaturas y te permite ver a lo largo de la cocción.</p>
+            <h4 class="ver-mas">La Olla Eléctrica también incluye accesorios: cuchara, taza medidora y un soporte de cocción al vapor, lo que aporta aún más versatilidad a tu cocina y más posibilidades para sus recetas.</h4>
+            <h2 class="ver-mas">Precio : S/.79.00 </h2>
+            <button class="btn-comprar" onclick="comprar()">Comprar</button>
+        </div>
+    </div>
+
+    <div>
+        <img class="banner "src="../images/banner3.jpg">
+    </div>
+
+    <h2 class="subtitulo">Menaje</h2>
+    <h3 class="subtitulo2">Aprovecha nuestras Promociones</h3>
+
+    <div class="galeria">
+        <div class="imagen">
+            <img src="../images/cuchillo.png" alt="Imagen 1">
+            <p></p>
+            <button class="btn-vermas" onclick="abrirModal('modal7')">Ver más</button>
+            <button class="btn-agregar" data-precio="142.00" data-nombre="Set cuchillos de acero inoxidable x5 Oster Godfrey">Agregar al carrito</button>
+        </div>
+        <div class="imagen">
+            <img src="../images/tetera.png" alt="Imagen 2">
+            <p></p>
+            <button class="btn-vermas" onclick="abrirModal('modal8')">Ver más</button>
+            <button class="btn-agregar" data-precio="21.90" data-nombre="Tetera Inoxidable 3.5 L Precio Uno">Agregar al carrito</button>
+        </div>
+        <div class="imagen">
+            <img src="../images/olla.png" alt="Imagen 3">
+            <p></p>
+            <button class="btn-vermas" onclick="abrirModal('modal9')">Ver más</button>
+            <button class="btn-agregar" data-precio="101.50" data-nombre="Olla Aluminio Pulida Festejo con tapa de vidrio N°22">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <!-- Modal 7 -->
+    <div id="modal7" class="modal">
+        
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('modal7')">&times;</span>
+            <h1>Set cuchillos de acero inoxidable x5 Oster Godfrey</h1>
+            <h2 class="ver-mas">Características:</h2>
+        
+            <p class="ver-mas">Tipo: look madera y acabado soft touch</p>
+            
+            <p class="ver-mas">Peso (kg): 0.55 kg
+            </p>  
+            
+            <p class="ver-mas">Marca: Oster</p>
+            
+            <p class="ver-mas">Material: Acero Inoxidable</p>
+            <p class="ver-mas">Incluye: Detalle del Set - 1. Cuchillo de Chef 20.3 cm | 1. Cuchillo de Pan 20.3 cm | 1. Cuchillo Rebanador 20.3 cm | 1. Cuchillos Multiusos 12.7 cm | 1. Cuchillo para Frutas 8.9 cm</p>
+
+            <p class="ver-mas">Garantía: 6 meses</p>
+
+            <h2 class="ver-mas">Precio : S/.142.00 </h2>
+            <button class="btn-comprar" onclick="comprar()">Comprar</button>
+        </div>
+    </div>
+
+    <!-- Modal 8 -->
+    <div id="modal8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('modal8')">&times;</span>
+            <h1>Tetera Inoxidable 3.5 L Precio Uno</h1>
+
+            <h2 class="ver-mas">Características:</h2>
+        
+            <p class="ver-mas">Tipo: Teteras y Cafeteras</p>
+            
+            <p class="ver-mas">Marca: PRECIO UNO
+            </p>  
+            
+            <h3 class="ver-mas">Información adicional</h3>
+            
+            <p class="ver-mas">La tetera de 3.5L de acero inoxidable de la marca Casa Joven es una excelente opción para preparar grandes cantidades de té o café. Su diseño elegante y resistente la convierte en una pieza duradera y funcional para cualquier hogar.</p>
+
+            <p class="ver-mas">Garantía: 6 meses</p>
+
+            <h2 class="ver-mas">Precio : S/.21.90 </h2>
+            <button class="btn-comprar" onclick="comprar()">Comprar</button>
+        </div>
+    </div>
+
+    <!-- Modal 9 -->
+    <div id="modal9" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('modal9')">&times;</span>
+            <h1>Olla Aluminio Pulida Festejo con tapa de vidrio N°22</h1>
+            <h2 class="ver-mas">Características:</h2>
+            <p class="ver-mas">-Producto manufacturado en aluminio con acabado pulido brillante exterior y lijado brillante interior.</p>
+            
+            <p class="ver-mas">-Alta resistencia y durabilidad. Asas de bakelita aislantes de calor con protector (brida) de acero inoxidable con diseño ergonómico para un manejo cómodo y seguro .
+            </p>  
+            
+            <p class="ver-mas">-Tapa de vidrio refractario con salida de vapor, resistente a cambios bruscos de temperatura e impactos con perilla y base en bakelita.</p>
+            <p class="ver-mas">-Ideal para uso en cocinas gas, eléctricas y vitrocerámica.</p>
+            <h2 class="ver-mas">Precio : S/.101.50 </h2>
+            <button class="btn-comprar" onclick="comprar()">Comprar</button>
+        </div>
+    </div>
+
+    <h2 class="somos">SOMOS Distribuidores oficiales</h2>
+
+   
+    <div class="log">
+        <img src="../logos/lg.png" alt="LG">
+        <img src="../logos/samsung.png" alt="Samsung">
+        <img src="../logos/electrolux.png" alt="Electrolux">
+        <img src="../logos/bosch.png" alt="Bosch">
+    </div>
+    
+    
+
+    <footer class="footer">
+        <div class="footer-content">
+           
+            <div class="footer-section contactos">
+                <h3>Contactos</h3>
+                <p>Teléfono: (+51) 981 515 659 </p>
+                <p>Email: atencionweb@electroshop.com.pe</p>
+            </div>
+            
+           
+            <div class="footer-section informacion-cliente">
+                <h3>Información para el Cliente</h3>
+                <p><a href="#">Política de Privacidad</a></p>
+                <p><a href="#">Términos y Condiciones</a></p>
+                <p><a href="#">Preguntas Frecuentes (FAQ)</a></p>
+            </div>
+            
+           
+            <div class="footer-section redes-sociales">
+                <h3>Síguenos</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 ElectroStore. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    
+    
+   
+    
+    
+    <script src="../js/script.js"></script>
+</body>
+</html>

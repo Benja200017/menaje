@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrodomésticos</title>
+    <link rel="stylesheet" href="../css/electrodomesticos.css"> 
+</head>
+<body>
+    <header>
+        <div class="encabezado">
+            <img  alt="Logo" class="logo" src="../images/logo.jpg">
+            <h1 class="titulo-centrado"><a href="index.html">ElectroStore</a></h1>
+            <div class="carrito">
+                <button onclick="verCarrito()" class="btn-carrito">
+                    <img src="../images/carrito.png" alt="Carrito">
+                    <span id="contador-items">0</span> items - S/. <span id="total-precio">0.00</span>
+                </button>
+            </div>
+        </div>
+        <form class="buscador">
+            <input type="text" placeholder="Buscar..." class="campo-busqueda">
+            <button type="submit" class="btn-buscar">Buscar</button>
+        </form>
+        <ul class="barra-categorias">
+            <li><a href="electrodomesticos.html">Electrodomésticos</a></li>
+            <li><a href="lineablanca.html">Línea Blanca</a></li>
+            <li><a href="menaje.html">Menaje</a></li>
+        </ul>
+    </header>
+
+
+    <main class="productos">
+        <h1 class="titulo">Electrodomésticos</h1>
+        <div class="galeria">
+            <div class="producto">
+                <img src="../electrodomesticos/samsungtv.jpeg" alt="Televisor">
+                <h2>Televisor Samsung Smart TV 77" OLED 4K QN77S90CAGXPE</h2>
+                <p>Pantalla OLED: Disfruta de negros profundos, blancos limpios y colores auténticos gracias al poder de Quantum Dot.
+                    Procesador Neural Quantum 4K con AI: Siente todo el poder de la Inteligencia Artificial 4K.</p>
+                <p>Precio: S/. 14999.00</p>
+                <p><strong>Stock:</strong> 100 unidades disponibles</p>
+                <button class="btn-agregar" data-precio="14999.00" data-nombre="Televisor Samsung Smart TV 77" OLED 4K QN77S90CAGXPE">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="../electrodomesticos/lgtv.jpeg" alt="Televisor">
+                <h2>LG UHD 75'' UR78 4K SMART TV con ThinQ AI</h2>
+                <p>Colores vivos y detalles extraordinarios con 4K HDR10 Pro
+                    Una experiencia visual más inteligente con el procesador α5 4K con AI de sexta generación
+                    Funcionalidad Inteligente, que incluye ThinQ AI y WebOS</p>
+                <p>Precio: S/. 4999.00</p>
+                <p><strong>Stock:</strong> 33 unidades disponibles</p>
+                <button class="btn-agregar" data-precio="4999.00" data-nombre="LG UHD 75'' UR78 4K SMART TV con ThinQ AI">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="../electrodomesticos/licuadora.jpeg" alt="Licuadora">
+                <h2>Licuadora clásica Oster® cromada 3 velocidades con perilla ergonómica BLST4655</h2>
+                <p>Las icónicas licuadoras Oster® son sinónimo de eficiencia y durabilidad. Y ahora, el nuevo diseño moderno de la espectacular licuadora clásica Oster® en cromo reinventada y modernizada con perilla ergonómica de tres velocidades, te brinda una mejor experiencia gracias a su motor seis veces más duradero, su novedoso diseño y sus controles ergonómicos. ¡Y estas son tan solo algunas de sus muchas otras ventajas!</p>
+                <p>Precio: S/. 489.00</p>
+                <p><strong>Stock:</strong> 10 unidades disponibles</p>
+                <button class="btn-agregar" data-precio="489.00" data-nombre="Licuadora clásica Oster® cromada 3 velocidades con perilla ergonómica BLST4655">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="../electrodomesticos/freidora.jpeg" alt="Freidora de aire">
+                <h2>Freidora de Aire Oster CKSTAF40DDF 4 Litros 7 Funciones Negro</h2>
+                La freidora de aire Oster® digital con recubrimiento DiamondForce tiene una capacidad de 4L y cuenta con un panel digital y 7 funciones preprogramadas, para cocinar pollo, carne, pescado, postres, vegetales, papas fritas y camarones. Incluye una bandeja de freír con aire extraíble con revestimiento antiadherente de Oster® DiamondForce para más espacio y una fácil limpieza.
+                <p>Precio: S/. 369.00</p>
+                <p><strong>Stock:</strong> 45 unidades disponibles</p>
+                <button class="btn-agregar" data-precio="369.00" data-nombre="Freidora de Aire Oster CKSTAF40DDF 4 Litros 7 Funciones Negro">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="../electrodomesticos/equipo.jpeg" alt="Sonido">
+                <h2>Minicomponente Vertical SONY MHC-V02 Negro</h2>
+                <p> El modelo MHC-V02 tiene un diseño moderno que emite luces de colores mientras va sonando la música. Sus parlantes presentan Jet Bast Booster que emiten sonido de alta calidad. Gracias a su conexión Bluetooth y USB tienes muchas más oportunidades de escuchar tu música favorita.</p>
+                <p>Precio: S/. 599.00</p>
+                <p><strong>Stock:</strong> 45 unidades disponibles</p>
+                <button class="btn-agregar" data-precio="599.00" data-nombre="Minicomponente Vertical SONY MHC-V02 Negro">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="../electrodomesticos/hornoe.jpeg" alt="horno">
+                <h2>Horno Eléctrico Imaco 66LT 2200W HEB60R</h2>
+                <p>Prepara el pollo rostizado más delicioso con este horno eléctrico HEB60R que Imaco te ofrece. El horno eléctrico tiene la capacidad de resistir hasta 250°C y te permitirá calentar tus panes en la mañana para que queden como recién hechos. ¡Estupendo! Además, es de 66 litros de capacidad, de modo que podrás cocinar todo tipo de alimentos.</p>
+                <p>Precio: S/. 599.00</p>
+                <p><strong>Stock:</strong> 36 unidades disponibles</p>
+                <button class="btn-agregar" data-precio="599.00" data-nombre="Horno Eléctrico Imaco 66LT 2200W HEB60R">Agregar al Carrito</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+      
+            <div class="footer-section contactos">
+                <h3>Contactos</h3>
+                <p>Teléfono: (+51) 981 515 659 </p>
+                <p>Email: atencionweb@electroshop.com.pe</p>
+            </div>
+            
+       
+            <div class="footer-section informacion-cliente">
+                <h3>Información para el Cliente</h3>
+                <p><a href="#">Política de Privacidad</a></p>
+                <p><a href="#">Términos y Condiciones</a></p>
+                <p><a href="#">Preguntas Frecuentes (FAQ)</a></p>
+            </div>
+            
+        
+            <div class="footer-section redes-sociales">
+                <h3>Síguenos</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        
+     
+        <div class="footer-bottom">
+            <p>&copy; 2024 ElectroStore. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

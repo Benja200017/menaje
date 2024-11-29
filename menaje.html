@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/menaje.css">
+</head>
+<body>
+    <header>
+        <div class="encabezado">
+            <img  alt="Logo" class="logo" src="../images/logo.jpg">
+            <h1 class="titulo-centrado"><a href="index.html">ElectroStore</a></h1>
+            <div class="carrito">
+                <button onclick="verCarrito()" class="btn-carrito">
+                    <img src="../images/carrito.png" alt="Carrito">
+                    <span id="contador-items">0</span> items - S/. <span id="total-precio">0.00</span>
+                </button>
+            </div>
+        </div>
+        <form class="buscador">
+            <input type="text" placeholder="Buscar..." class="campo-busqueda">
+            <button type="submit" class="btn-buscar">Buscar</button>
+        </form>
+        <ul class="barra-categorias">
+            <li><a href="electrodomesticos.html">Electrodomésticos</a></li>
+            <li><a href="lineablanca.html">Línea Blanca</a></li>
+            <li><a href="menaje.html">Menaje</a></li>
+        </ul>
+    </header>
+
+
+    <main class="productos">
+        <h1 class="titulo">Menaje</h1>
+        <div class="galeria">
+            <div class="producto">
+                <img src="../menaje/cuchillos.jpg" alt="cuchillos">
+                <h2>Juego de Cuchillos Tramontina Plenus con Láminas de Acero Inoxidable y Mangos de Polipropileno Negro 9 Piezas</h2>
+                <p>Con el juego de cuchillos Tramontina Plenus con láminas de acero inoxidable y mangos de polipropileno negro de 9 piezas tendrá la solución completa de cuchillos para usar en los más diversos tipos de cortes y oportunidades gastronómicas.</p>
+                <p>Precio: S/. 80.91</p>
+                <p><strong>Stock:</strong> 5 unidades disponibles</p>
+                <button class="btn-agregar" data-precio="80.91" data-nombre="Juego de Cuchillos Tramontina Plenus con Láminas de Acero Inoxidable y Mangos de Polipropileno Negro 9 Piezas">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="../menaje/cuchillovictorinox.jfif" alt="cuchillo">
+                <h2>Set de cuchillos Swiss Classic, 7 piezas, color negro, Victorinox</h2>
+                <p>Un set de cuchillos profesionales es la piedra angular de su cocina. Apuntalan toda su creatividad culinaria (y platos soñados). Le conviene tener hojas que no tengan límites y sea un placer usarlas. Nuestro Set de cocina Swiss Classic, de 7 piezas, es la elección natural. </p>
+                <p>Precio: S/. 829.00</p>
+                <p><strong>Stock:</strong> 45 unidades disponibles</p>
+                <button class="btn-agregar" data-precio="829.00" data-nombre="Set de cuchillos Swiss Classic, 7 piezas, color negro, Victorinox">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="../menaje/teteraroja.jfif" alt="Ttetera">
+                <h2>Tetera Color Surtido 2.5l</h2>
+                <p>La  Tetera de Just Home Collection es una pieza fundamental para tu cocina ya que es práctica y funcional. Está elaborada en acero inoxidable que asegura una larga vida útil del producto. Cuenta con un clásico silbato que avisa sin timidez cuando el agua está hirviendo. </p>
+                <p>Precio: S/. 39.90</p>
+                <p><strong>Stock:</strong> 10 unidades disponibles</p>
+                <button class="btn-agregar" data-precio="39.90" data-nombre="Tetera Color Surtido 2.5l">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="../menaje/teteratinzen.jpg" alt="Tetera">
+                <h2>Tetera 2 Lt | Tinsen</h2>
+                <p>Esta tetera es de gran utilidad para poder hervir agua de manera eficiente.</p>
+                <p>Precio: S/. 40.00</p>
+                <p><strong>Stock:</strong> 34 unidades disponibles</p>
+                
+                <button class="btn-agregar" data-precio="40.00" data-nombre="Tetera 2 Lt | Tinsen">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="../menaje/ollaorange.jfif" alt="Cocina">
+                <h2>Juego de ollas Orange Negra 5 piezas</h2>
+                <p> ¡Renueva tu cocina con el elegante Juego de ollas Orange Negra 5 piezas! Con garantía de 5 años, estas ollas te aseguran calidad y durabilidad. Fabricadas en acero inoxidable con acabado aluminizado, ofrecen una excelente conducción del calor para una cocción uniforme. Su color negro moderno y sofisticado las hace destacar en cualquier ambiente.</p>
+                <p>Precio: S/. 84.91</p>
+                <p><strong>Stock:</strong> 59 unidades disponibles</p>
+                <button class="btn-agregar" data-precio="84.91" data-nombre="Juego de ollas Orange Negra 5 piezas">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="../menaje/ollatramontina.jpg" alt="cocina">
+                <h2>Juego de Ollas Loreto en Aluminio con Revestimiento Interno y Externo Antiadherente Starflon Max con Mangos y Asas Rojo 8 Piezas</h2>
+                <p>Los amantes de la gastronomía confirman que, además de alimentos sabrosos, una deliciosa comida necesita prepararse con utensilios de calidad. ¡Y la batería de cocina Tramontina Loreto en aluminio con revestimiento interno y externo de antiadherente Starflon Max con mangos y asas rojo de 5 piezas es la elección ideal para usted!</p>
+                <p>Precio: S/. 254.15</p>
+                <p><strong>Stock:</strong> 6 unidades disponibles</p>
+                <button class="btn-agregar" data-precio="254.15" data-nombre="Juego de Ollas Loreto en Aluminio con Revestimiento Interno y Externo Antiadherente Starflon Max con Mangos y Asas Rojo 8 Piezas">Agregar al Carrito</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+           
+            <div class="footer-section contactos">
+                <h3>Contactos</h3>
+                <p>Teléfono: (+51) 981 515 659 </p>
+                <p>Email: atencionweb@electroshop.com.pe</p>
+            </div>
+            
+          
+            <div class="footer-section informacion-cliente">
+                <h3>Información para el Cliente</h3>
+                <p><a href="#">Política de Privacidad</a></p>
+                <p><a href="#">Términos y Condiciones</a></p>
+                <p><a href="#">Preguntas Frecuentes (FAQ)</a></p>
+            </div>
+            
+           
+            <div class="footer-section redes-sociales">
+                <h3>Síguenos</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 ElectroStore. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
